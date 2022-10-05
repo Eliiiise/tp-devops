@@ -1,4 +1,4 @@
-# my-own-demo
+# my-own-demo2
 
 This project is a simple express app for demonstrating testing and code coverage.
 [Jest](https://facebook.github.io/jest/) and
