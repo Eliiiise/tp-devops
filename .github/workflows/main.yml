@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
   pull_request:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -38,8 +38,8 @@ jobs:
     - name: Build and push
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:push -a tp-lead-devops-staging web 
+      run: heroku container:push -a tp-lead-devops-production web 
     - name: Release
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:release -a tp-lead-devops-staging web 
+      run: heroku container:release -a tp-lead-devops-production web 
