@@ -15,7 +15,7 @@
     "jest": "jest --coverage app/__tests__/*.test.js",
     "lint": "eslint app e2e_tests",
     "prettier": "prettier --write app/*.js app/__{tests,mocks}__/*.js e2e_tests/*.js",
-    "coveralls": "jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=lcov test | coveralls"
+    "coveralls": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "dependencies": {
     "ejs": "^3.1.8",
